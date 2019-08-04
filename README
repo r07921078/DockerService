@@ -1,0 +1,19 @@
+# git server(docker, gitea)
+ref : https://docs.gitea.io/zh-tw/install-with-docker/
+      https://jackbigapple.blogspot.com/2019/01/gittea-git-server-docker.html
+
+# container 22 & 3000 port => localhost 10022 & 10080
+sudo docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest
+
+
+
+# wordpress
+ref : https://hub.docker.com/_/wordpress/
+
+
+=> config stack.yml file
+
+sudo docker swarm init
+sudo docker stack deploy -c stack.yml wordpress
+
+
